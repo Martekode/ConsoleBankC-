@@ -2,9 +2,9 @@
 
 public class Client
 {
-    private int Id { get; set; }
-    private string Name { get; set; }= String.Empty;
-    private DateTime Date_Joined { get; set; }
+    private int Id { get; }
+    private string Name { get; }= String.Empty;
+    private DateTime Date_Joined { get; }
 
     public Client(int id, string name)
     {

@@ -6,33 +6,30 @@ public enum Type {
 }
 public class BankAccount
 {
-    public Client client;
-    public int Balance = 0;
-    public Type type;
+    private Client client;
+    private int Balance = 0;
+    private Type type;
 
     public BankAccount(Client inputClient, int initDeposit,int initType)
     {
         this.client = inputClient;
         this.Balance += initDeposit;
-        this.type = TypeValidation(initType);
+        TypeValidation(initType);
     }
     
-    private static Type TypeValidation(int input) 
+    private void TypeValidation(int input) 
     {
-        Type rtrn;
-        if (input == 1)
+        switch (input)
         {
-            return rtrn = Type.CheckingsAccount;
-        }else if (input == 2)
-        {
-            return rtrn = Type.SavingsAccount;
-        }else if (input == 3)
-        {
-            return rtrn = Type.CreditAccount;
-        }
-        else
-        {
-            return rtrn = Type.CheckingsAccount;
+            case 1 :
+                this.type = Type.CheckingsAccount;
+                break;
+            case 2 :
+                this.type = Type.SavingsAccount;
+                break;
+            case 3 :
+                this.type = Type.CreditAccount;
+                break;
         }
     }
 
