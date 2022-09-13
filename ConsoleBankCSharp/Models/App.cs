@@ -46,19 +46,27 @@ public sealed class App
 
     public static BankAccount ChooseBankAccount(Client client)
     {
+        Console.ForegroundColor = ConsoleColor.Green;
         Console.WriteLine($"Hello {client.name}, what type of account do you want to make?");
         Console.WriteLine("There are 3 kind of accounts;");
+        Console.ForegroundColor = ConsoleColor.Red;
         Console.WriteLine("1: Checking Account");
+        Console.ForegroundColor = ConsoleColor.Green;
         Console.WriteLine("This account is regular with non-negative balance and deposit/withdraw rights");
+        Console.ForegroundColor = ConsoleColor.DarkCyan;
         Console.WriteLine("2: Saving Account");
+        Console.ForegroundColor = ConsoleColor.Green;
         Console.WriteLine("This account only has deposit rights. To withdraw funds, contact ous via mail or via cell: 0478643605");
+        Console.ForegroundColor = ConsoleColor.Yellow;
         Console.WriteLine("3: Credit Account");
+        Console.ForegroundColor = ConsoleColor.Green;
         Console.WriteLine("This account has all the checking account rights,");
         Console.WriteLine(" but also can go up to 2500 euro's negative");
         Console.WriteLine("------------------------------------------------------");
         Console.WriteLine("Make your choice! [ 1 , 2 , 3]");
         int InitType = Int32.Parse(Console.ReadLine() ?? "1");
-        Console.WriteLine("Now enter a minimum deposit of 10€");
+        Console.WriteLine("Now enter a minimum deposit of 10 euro's.");
+        Console.WriteLine("If u enter less then 10, it will default to 10 euro's.");
         int InitDeposit = Int32.Parse(Console.ReadLine() ?? "10");
         BankAccount bankAccount = new BankAccount(client , InitDeposit, InitType );
         Console.WriteLine($"{client.name}, your bank account was successfully set up");
