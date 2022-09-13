@@ -2,15 +2,17 @@
 
 public class Client
 {
-    private int Id { get; }
-    private string Name { get; }= String.Empty;
-    private DateTime Date_Joined { get; }
-
+    private int _Id { get; set; }
+    public int id => _Id;
+    private string _Name { get; } = String.Empty;
+    public string name => _Name;
+    private DateTime _Date_Joined { get; }
+    public DateTime date_joined => _Date_Joined;
     public Client(int id, string name)
     {
-        this.Id = id;
-        this.Name = name;
-        this.Date_Joined = new DateTime();
+        _Id = id;
+        _Name = name;
+        _Date_Joined = new DateTime();
     }
 
 }
