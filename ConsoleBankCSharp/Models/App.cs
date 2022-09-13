@@ -1,4 +1,6 @@
-﻿namespace ConsoleBankCSharp.Models;
+﻿using System.Diagnostics;
+
+namespace ConsoleBankCSharp.Models;
 
 public sealed class App
 {
@@ -20,6 +22,28 @@ public sealed class App
         }
     }
 
+    public static void WithdrawFunds(BankAccount bankAccount)
+    {
+        Console.WriteLine("How much do you want to withdraw");
+        int response = Int32.Parse(Console.ReadLine()?? "0"); 
+        if (response < 0)
+        {
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine("that's a negative amount, please enter a positive amount to withdraw");
+            WithdrawFunds(bankAccount);
+        }else if (response == 0)
+        {
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine("The amount you gave was 0... Please don't waste my time!!");
+            WithdrawFunds(bankAccount);
+        }
+        else
+        {
+            Console.ForegroundColor = ConsoleColor.Green;
+            bankAccount.WithDraw(response);
+            Console.WriteLine($"{bankAccount.Client.name}, your declared funds have been withdrawn!");
+        }
+    }
     private static string EnterName()
     {
         Console.WriteLine("Please give enter your name:");
