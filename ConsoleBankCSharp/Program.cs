@@ -4,7 +4,7 @@ using ConsoleBankCSharp.Models;
 static void Main()
 {
     Client client = null;
-    BankAccount bankAccount;
+    BankAccount bankAccount = null;
     Console.WriteLine("Hello dear (Potential) Customer!");
     Console.WriteLine("Would you like to register as a new Client? [yes / no]");
     string makeClientYesNo = Console.ReadLine();
@@ -41,6 +41,12 @@ static void Main()
                 Console.WriteLine("No account was made!");
                 break;
         }
+    }
+
+    if (bankAccount is not null)
+    {
+        // here comes interfacing with client
+        // to fire off the withdraw or check account functions
     }
 }
 Main();
