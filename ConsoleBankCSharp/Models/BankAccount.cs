@@ -7,13 +7,14 @@ public enum Type {
 public class BankAccount
 {
     private Client client;
+    public Client Client => client;
     private int Balance = 0;
     private Type type;
 
     public BankAccount(Client inputClient, int initDeposit,int initType)
     {
-        this.client = inputClient;
-        this.Balance += initDeposit;
+        client = inputClient;
+        Balance += initDeposit;
         TypeValidation(initType);
     }
     
