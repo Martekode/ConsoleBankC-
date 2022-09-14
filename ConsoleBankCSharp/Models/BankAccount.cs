@@ -23,20 +23,20 @@ public class BankAccount
         switch (input)
         {
             case 1 :
-                this.type = Type.CheckingsAccount;
+                type = Type.CheckingsAccount;
                 break;
             case 2 :
-                this.type = Type.SavingsAccount;
+                type = Type.SavingsAccount;
                 break;
             case 3 :
-                this.type = Type.CreditAccount;
+                type = Type.CreditAccount;
                 break;
         }
     }
 
     public int CheckBalance()
     {
-        return this.Balance;
+        return Balance;
     }
 
     public void WithDraw(int input)
