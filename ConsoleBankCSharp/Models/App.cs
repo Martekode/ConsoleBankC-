@@ -25,28 +25,34 @@ public sealed class App
     public static void WithdrawFunds(BankAccount bankAccount)
     {
         Console.WriteLine("How much do you want to withdraw");
-        int response = Int32.Parse(Console.ReadLine()?? "0"); 
+        string responseString = Console.ReadLine() ?? "0";
+        int response = Int32.Parse(responseString);     
         if (response < 0)
         {
             Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("that's a negative amount, please enter a positive amount to withdraw");
+            Console.ResetColor();
             WithdrawFunds(bankAccount);
+            return;
         }else if (response == 0)
         {
             Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("The amount you gave was 0... Please don't waste my time!!");
+            Console.ResetColor();
             WithdrawFunds(bankAccount);
+            return;
         }
         else
         {
             Console.ForegroundColor = ConsoleColor.Green;
             bankAccount.WithDraw(response);
-            Console.WriteLine($"{bankAccount.Client.name}, your declared funds have been withdrawn!");
+            Console.WriteLine($"{bankAccount.Client.name}, your balance is now: {bankAccount.CheckBalance()}");
+            Console.ResetColor();
         }
     }
     private static string EnterName()
     {
-        Console.WriteLine("Please give enter your name:");
+        Console.WriteLine("Please enter your name:");
         string response = Console.ReadLine();
         if (!String.IsNullOrEmpty(response))
         {
@@ -92,8 +98,34 @@ public sealed class App
         Console.WriteLine("Now enter a minimum deposit of 10 euro's.");
         Console.WriteLine("If u enter less then 10, it will default to 10 euro's.");
         int InitDeposit = Int32.Parse(Console.ReadLine() ?? "10");
+        if (InitDeposit < 10 && InitDeposit > 0)
+        {
+            InitDeposit = 10;
+        }
         BankAccount bankAccount = new BankAccount(client , InitDeposit, InitType );
         Console.WriteLine($"{client.name}, your bank account was successfully set up");
         return bankAccount;
+    }
+
+    public static void AccountInterfacing(string input , BankAccount bankAcc)
+    {
+        switch (input)
+        {
+            case "1":
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.WriteLine("Checking Balance...");
+                int resBalance = bankAcc.CheckBalance();
+                Console.WriteLine($"Your Balance: {resBalance} €");
+                Console.ResetColor();
+                break;
+            case "2":
+                Console.ForegroundColor = ConsoleColor.Cyan;
+                Console.WriteLine("Let's start the withdraw!");
+                WithdrawFunds(bankAcc);
+                break;
+            case "3":
+                //logic
+                break;
+        }
     }
 }
