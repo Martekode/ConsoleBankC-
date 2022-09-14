@@ -47,6 +47,33 @@ static void Main()
     {
         // here comes interfacing with client
         // to fire off the withdraw or check account functions
+        Console.ForegroundColor = ConsoleColor.DarkMagenta;
+        Console.WriteLine("__________________________________________");
+        Console.WriteLine("|----------------------------------------|");
+        Console.WriteLine("|----------Account Interfacing-----------|");
+        Console.WriteLine("|----------------------------------------|");
+        Console.WriteLine("__________________________________________");
+        Console.ForegroundColor = ConsoleColor.White;
+        Console.WriteLine("Action Options:");
+        Console.WriteLine("Check Balance (1)");
+        Console.WriteLine("Withdraw Funds (2)");
+        Console.WriteLine("Deposit Funds (3)");
+        Console.WriteLine("What would you like to do? [ 1 , 2 , 3 ]");
+        string response = Console.ReadLine() ?? "1";
+        
+        //Actual switch to fire up the events
+        switch (response)
+        {
+            case "1":
+                //logic
+                break;
+            case "2":
+                //logic
+                break;
+            case "3":
+                //logic
+                break;
+        }
     }
 }
 Main();
