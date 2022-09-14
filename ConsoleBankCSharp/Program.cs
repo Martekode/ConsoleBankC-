@@ -62,21 +62,7 @@ static void Main()
         string response = Console.ReadLine() ?? "1";
         
         //Actual switch to fire up the events
-        switch (response)
-        {
-            case "1":
-                Console.ForegroundColor = ConsoleColor.Yellow;
-                Console.WriteLine("Checking Balance...");
-                int resBalance = bankAccount.CheckBalance();
-                Console.WriteLine($"Your Balance: {resBalance}");
-                break;
-            case "2":
-                //logic
-                break;
-            case "3":
-                //logic
-                break;
-        }
+        App.AccountInterfacing(response, bankAccount);
     }
 }
 Main();
