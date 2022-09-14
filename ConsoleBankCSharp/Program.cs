@@ -53,7 +53,7 @@ static void Main()
         Console.WriteLine("|----------Account Interfacing-----------|");
         Console.WriteLine("|----------------------------------------|");
         Console.WriteLine("__________________________________________");
-        Console.ForegroundColor = ConsoleColor.White;
+        Console.ResetColor();
         Console.WriteLine("Action Options:");
         Console.WriteLine("Check Balance (1)");
         Console.WriteLine("Withdraw Funds (2)");
@@ -65,7 +65,10 @@ static void Main()
         switch (response)
         {
             case "1":
-                //logic
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.WriteLine("Checking Balance...");
+                int resBalance = bankAccount.CheckBalance();
+                Console.WriteLine($"Your Balance: {resBalance}");
                 break;
             case "2":
                 //logic
