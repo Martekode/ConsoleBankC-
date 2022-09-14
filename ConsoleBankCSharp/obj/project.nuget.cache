@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "QsKuQR9ni55dT5MKcZosOcgJu3r4X7nq12DTpIXOZqFEPUNKpJr3P7/Q9ffmpkH/OJXu4IghLr9hvb6Vi/4oZg==",
+  "dgSpecHash": "SlTwQMZTPNeu+rMP41ovqkwhysFqAwlH0QmTbiOCg7CJy3zBd3a/fdypIaue+jBvkCG60DP7yVgR/TNyax7qFQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\brian\\RiderProjects\\ConsoleBankCSharp\\ConsoleBankCSharp\\ConsoleBankCSharp.csproj",
+  "projectFilePath": "/home/marteko/RiderProjects/ConsoleBankC-/ConsoleBankCSharp/ConsoleBankCSharp.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

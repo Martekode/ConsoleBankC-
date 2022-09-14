@@ -8,26 +8,24 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\brian\\.nuget\\packages\\": {}
+    "/home/marteko/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\brian\\RiderProjects\\ConsoleBankCSharp\\ConsoleBankCSharp\\ConsoleBankCSharp.csproj",
+      "projectUniqueName": "/home/marteko/RiderProjects/ConsoleBankC-/ConsoleBankCSharp/ConsoleBankCSharp.csproj",
       "projectName": "ConsoleBankCSharp",
-      "projectPath": "C:\\Users\\brian\\RiderProjects\\ConsoleBankCSharp\\ConsoleBankCSharp\\ConsoleBankCSharp.csproj",
-      "packagesPath": "C:\\Users\\brian\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\brian\\RiderProjects\\ConsoleBankCSharp\\ConsoleBankCSharp\\obj\\",
+      "projectPath": "/home/marteko/RiderProjects/ConsoleBankC-/ConsoleBankCSharp/ConsoleBankCSharp.csproj",
+      "packagesPath": "/home/marteko/.nuget/packages/",
+      "outputPath": "/home/marteko/RiderProjects/ConsoleBankC-/ConsoleBankCSharp/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\brian\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/home/marteko/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -60,7 +58,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/dotnet6-6.0.109/sdk/6.0.109/RuntimeIdentifierGraph.json"
       }
     }
   }
