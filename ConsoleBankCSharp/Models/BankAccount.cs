@@ -67,7 +67,7 @@ public class BankAccount
     {
         if (input > 0)
         {
-            this.Balance += input;
+            Balance += input;
             Console.WriteLine($"{input} Has been deposited onto your account");  
         }
         else
