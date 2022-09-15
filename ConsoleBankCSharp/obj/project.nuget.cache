@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "SlTwQMZTPNeu+rMP41ovqkwhysFqAwlH0QmTbiOCg7CJy3zBd3a/fdypIaue+jBvkCG60DP7yVgR/TNyax7qFQ==",
+  "dgSpecHash": "FJhRCt5rX+4I00YB3WWeNphwtXPlQnODswS3RgIUyF4+xV7u+GQDjbmg0GZHsBt3+0D24XU4H8uwNG8glJNeLg==",
   "success": true,
   "projectFilePath": "/home/marteko/RiderProjects/ConsoleBankC-/ConsoleBankCSharp/ConsoleBankCSharp.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/home/marteko/.nuget/packages/sonaranalyzer.csharp/8.44.0.52574/sonaranalyzer.csharp.8.44.0.52574.nupkg.sha512"
+  ],
   "logs": []
 }
