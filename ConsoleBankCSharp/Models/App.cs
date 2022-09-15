@@ -122,9 +122,23 @@ public sealed class App
                 Console.ForegroundColor = ConsoleColor.Cyan;
                 Console.WriteLine("Let's start the withdraw!");
                 WithdrawFunds(bankAcc);
+                Console.ResetColor();
                 break;
             case "3":
-                //logic
+                Console.ForegroundColor = ConsoleColor.Magenta;
+                Console.WriteLine("How much do you want to deposit?");
+                Console.WriteLine("If you enter 0, nothing or a negative number, it will default to 0!");
+                string resDeposit = Console.ReadLine() ?? "0";
+                if (Int32.Parse(resDeposit) is 0 or < 0)
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine($"Your amount is {resDeposit}, this is an invalid number!");
+                    Console.ResetColor();
+                    break;
+                }
+
+                Console.WriteLine("Depositing funds...");
+                bankAcc.Deposit(Int32.Parse(resDeposit));
                 break;
         }
     }
