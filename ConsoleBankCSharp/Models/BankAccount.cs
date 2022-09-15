@@ -6,7 +6,7 @@ public enum Type {
 }
 public class BankAccount
 {
-    private Client client;
+    private readonly Client client;
     public Client Client => client;
     private int Balance = 0;
     private Type type;

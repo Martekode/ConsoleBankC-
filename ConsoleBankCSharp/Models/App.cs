@@ -33,14 +33,12 @@ public sealed class App
             Console.WriteLine("that's a negative amount, please enter a positive amount to withdraw");
             Console.ResetColor();
             WithdrawFunds(bankAccount);
-            return;
         }else if (response == 0)
         {
             Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("The amount you gave was 0... Please don't waste my time!!");
             Console.ResetColor();
             WithdrawFunds(bankAccount);
-            return;
         }
         else
         {
